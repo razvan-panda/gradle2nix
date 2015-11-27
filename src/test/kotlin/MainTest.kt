@@ -1,4 +1,4 @@
-package org.mcpkg.server.tests
+package org.mcpkg.gradle2nix.tests
 
 import junit.framework.TestCase
 import kotlin.test.assertEquals
