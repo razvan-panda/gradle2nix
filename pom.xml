@@ -6,7 +6,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.mcpkg</groupId>
-  <artifactId>server</artifactId>
+  <artifactId>gradle2nix</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 
   <properties>
