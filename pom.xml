@@ -12,8 +12,8 @@
   <properties>
     <kotlin.version>0.1-SNAPSHOT</kotlin.version>
     <junit.version>4.10</junit.version>
-    <jgit.version>4.1.1.201511131810-r</jgit.version>
     <gson.version>2.5</gson.version>
+    <aether.version>1.0.2.v20150114</aether.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -32,12 +32,6 @@
     </dependency>
 
     <dependency>
-      <groupId>org.eclipse.jgit</groupId>
-      <artifactId>org.eclipse.jgit</artifactId>
-      <version>${jgit.version}</version>
-    </dependency>
-
-    <dependency>
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
       <version>${gson.version}</version>
@@ -47,6 +41,60 @@
       <groupId>org.apache.maven</groupId>
       <artifactId>maven-core</artifactId>
       <version>3.3.9</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.eclipse.aether</groupId>
+      <artifactId>aether-api</artifactId>
+      <version>${aether.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.eclipse.aether</groupId>
+      <artifactId>aether-spi</artifactId>
+      <version>${aether.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.eclipse.aether</groupId>
+      <artifactId>aether-util</artifactId>
+      <version>${aether.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.eclipse.aether</groupId>
+      <artifactId>aether-impl</artifactId>
+      <version>${aether.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.eclipse.aether</groupId>
+      <artifactId>aether-connector-basic</artifactId>
+      <version>${aether.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.eclipse.aether</groupId>
+      <artifactId>aether-transport-classpath</artifactId>
+      <version>${aether.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.eclipse.aether</groupId>
+      <artifactId>aether-transport-file</artifactId>
+      <version>${aether.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.eclipse.aether</groupId>
+      <artifactId>aether-transport-http</artifactId>
+      <version>${aether.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.eclipse.aether</groupId>
+      <artifactId>aether-transport-wagon</artifactId>
+      <version>${aether.version}</version>
     </dependency>
   </dependencies>
 
@@ -88,7 +136,7 @@
           </execution>
         </executions>
         <configuration>
-          <mainClass>org.mcpkg.server.MainKt</mainClass>
+          <mainClass>org.mcpkg.gradle2nix.MainKt</mainClass>
         </configuration>
       </plugin>
     </plugins>
