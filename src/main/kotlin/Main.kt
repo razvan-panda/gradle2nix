@@ -5,6 +5,9 @@ import org.mcpkg.gradle2nix.DumpPomDeps;
 
 fun main(args: Array<String>) {
     val inputFile = File(args[0]);
-    val dumper = DumpPomDeps();
-    dumper.doDump(inputFile);
+    val dumper = DumpPomDeps(inputFile);
+    for(d in dumper.getDependencies()) {
+        println("everything: ${d}");
+    }
+    println("test: ${dumper.model}");
 }
