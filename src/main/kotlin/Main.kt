@@ -7,7 +7,12 @@ fun main(args: Array<String>) {
     val inputFile = File(args[0]);
     val dumper = DumpPomDeps(inputFile);
     for(d in dumper.getDependencies()) {
-        println("everything: ${d}");
+        println("dependency: ${d}");
     }
-    println("test: ${dumper.model}");
+    for(r in dumper.getRepositories()) {
+        println("repository: ${r}");
+    }
+    dumper.execute();
 }
+
+
