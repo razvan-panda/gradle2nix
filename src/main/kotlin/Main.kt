@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     for(r in dumper.getRepositories()) {
         println("repository: ${r}");
     }
-    dumper.execute();
+    dumper.exampleCode();
 }
 
 
