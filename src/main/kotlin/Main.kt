@@ -7,8 +7,7 @@ import org.eclipse.aether.artifact.DefaultArtifact;
 fun main(args: Array<String>) {
     val inputFile = File(args[0]);
     val artifact = DefaultArtifact("org.apache.maven:maven-aether-provider:3.1.0");
-    val dumper = DumpPomDeps(inputFile);
-    println(dumper.getDependencies(artifact));
+    println(ResolveDependencies().getDependencies(artifact));
 }
 
 
