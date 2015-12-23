@@ -24,22 +24,7 @@ import org.eclipse.aether.graph.DependencyVisitor;
 import org.eclipse.aether.util.graph.manager.DependencyManagerUtils;
 import org.eclipse.aether.util.graph.transformer.ConflictResolver;
 
-private class ConsoleDependencyGraphDumper: DependencyVisitor {
-    public val depList = ArrayList<AetherArtifact>();
-
-    override public fun visitEnter(node: DependencyNode): Boolean {
-        depList.add(node.artifact);
-        return true;
-    }
-
-    override public fun visitLeave(node: DependencyNode): Boolean {
-        return true;
-    }
-}
-
-data class ArtifactDownloadInfo(var url: String = "", var hash: String = "");
-
-class DumpPomDeps(pomFile: File) {
+public class DumpPomDeps(pomFile: File) {
     private val model = readModel(pomFile);
 
     public fun getDependencies(): List<AetherDependency>
@@ -112,3 +97,18 @@ class DumpPomDeps(pomFile: File) {
      }
 }
 
+private class ConsoleDependencyGraphDumper: DependencyVisitor {
+    public val depList = ArrayList<AetherArtifact>();
+
+    override public fun visitEnter(node: DependencyNode): Boolean {
+        depList.add(node.artifact);
+        return true;
+    }
+
+    override public fun visitLeave(node: DependencyNode): Boolean {
+        return true;
+    }
+}
+
+private data class ArtifactDownloadInfo(var url: String = "",
+                                        var hash: String = "");
