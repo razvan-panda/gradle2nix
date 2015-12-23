@@ -18,7 +18,7 @@ import org.eclipse.aether.artifact.DefaultArtifact as AetherDefaultArtifact;
 import org.eclipse.aether.graph.Dependency         as AetherDependency;
 import org.eclipse.aether.graph.Exclusion          as AetherExclusion;
 
-public class DumpPomDeps(pomFile: File) {
+public class ReadPOM(pomFile: File) {
     private val model = readModel(pomFile);
 
     public fun getDependencies(): List<AetherDependency>

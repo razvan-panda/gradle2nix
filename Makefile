@@ -1,8 +1,10 @@
 SHELL := bash
 
-SOURCE_FILES = src/main/kotlin/Main.kt        \
-               src/test/kotlin/MainTest.kt    \
-               src/main/kotlin/DumpPomDeps.kt \
+SOURCE_FILES = src/main/kotlin/Main.kt                 \
+               src/test/kotlin/MainTest.kt             \
+               src/main/kotlin/ReadPOM.kt              \
+               src/main/kotlin/ResolveDependencies.kt  \
+               src/main/kotlin/DependencyDumperBoot.kt \
                src/main/kotlin/FileWrapper.kt
 
 MVN = mvn

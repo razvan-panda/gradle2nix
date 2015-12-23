@@ -15,7 +15,7 @@ public class ResolveDependencies {
     val system = booter.newRS();
     val session = booter.newRSSession(system);
     
-    public fun getDependencies(input: Artifact): ArrayList<Artifact> {
+    public fun getDependencies(input: Artifact): MutableList<Artifact> {
          val descRequest = ArtifactDescriptorRequest();
          descRequest.setArtifact(input);
          descRequest.setRepositories(booter.newRepositories(system, session));
