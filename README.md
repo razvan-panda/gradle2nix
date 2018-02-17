@@ -16,3 +16,10 @@ $ make build
 ```
 $ make test
 ```
+
+
+## Run
+
+```
+mvn exec:java -Dexec.args="pom.xml"
+```
